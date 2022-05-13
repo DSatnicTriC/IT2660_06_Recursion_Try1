@@ -8,17 +8,22 @@ public class RecursionRunner {
 
 		System.out.println("The array before any sorting");
 		System.out.println(Arrays.toString(ourArray));
+
+		MergeSort.performSort(ourArray);
+
+		System.out.println("The array AFTER sorting");
+		System.out.println(Arrays.toString(ourArray));
 	}
-	
+
 	private static int[] getRandomNumbers(int arraySize, int arrayMin, int arrayMax) {
 		var newArray = new int[arraySize];
-		
+
 		Random rand = new Random();
-		
+
 		for (int i = 0; i < newArray.length; i++) {
 			newArray[i] = rand.nextInt(arrayMin, arrayMax);
 		}
-		
+
 		return newArray;
 	}
 
